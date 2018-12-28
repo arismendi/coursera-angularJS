@@ -20,11 +20,7 @@ function LunchCheckController($scope){
 
   function countDishes(dishes_list) {
   var totalDishes = 0;
-  for (var i = 0; i < dishes_list.length; i++) {
-    if(dishes_list[i].trim() === "")
-    continue;
-    totalDishes++;
-  }
+  for (var i = 0; i < dishes_list.length; i++) if(dishes_list[i].trim() != "") totalDishes++;
   return totalDishes;
 }
 }
